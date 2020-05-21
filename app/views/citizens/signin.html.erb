@@ -1,2 +1,11 @@
-<h1>Citizens#signin</h1>
-<p>Find me in app/views/citizens/signin.html.erb</p>
+<p>Please sign in with your email and password</p>
+
+<%= simple_form_for(@citizen, url: signin_path) do |f| %>
+    <%=  f.input :email %>
+    <%=  f.input :password %>
+
+    <%= f.submit 'Signin', class: 'btn btn-primary' %>
+<% end %>
+
+<%= link_to 'Sign up now', register_path, class: "btn btn-secondary my-3" %>
+  

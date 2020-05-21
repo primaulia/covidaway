@@ -1,0 +1,8 @@
+<p>Create an appointment for you!</p>
+
+<%= simple_form_for([@citizen, @new_appt]) do |f| %>
+  <%= f.input :citizen, input_html: { value: @citizen.email } %>
+  <%= f.association :clinic, label_method: :address %>
+  <%= f.button :submit, class: 'btn btn-primary' %>    
+<% end %>
+  

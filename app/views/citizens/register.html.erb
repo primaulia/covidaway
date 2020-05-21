@@ -1,2 +1,9 @@
-<h1>Citizens#register</h1>
-<p>Find me in app/views/citizens/register.html.erb</p>
+<p>Please register by submitting the form below</p>
+
+<%= simple_form_for(@citizen) do |f| %>
+    <%=  f.input :email %>
+    <%=  f.input :password %>
+    <%=  f.input :postal_code %>
+
+    <%= f.submit 'Register', class: 'btn btn-primary' %>
+<% end %>
